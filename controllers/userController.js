@@ -29,9 +29,8 @@ const getdetailbyid= async(req, res) => {
 
         if (data) {
 
-            const userData= await user.findOne({ _id: id});
 
-            res.status(200).send({success: true, msg: "product details :", data: userData});
+            res.status(200).send({success: true, msg: "product details :", data: data});
             
         } else {
             res.status(200).send({ success: false, msg: "id not found!"});
@@ -120,7 +119,7 @@ const updateproduct= async(req, res) =>{
     }
  }
 
- 
+
 module.exports={
     getdetail,
     getdetailbyid,
