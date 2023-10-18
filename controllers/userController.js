@@ -28,7 +28,9 @@ const getdetailbyid= async(req, res) => {
 
         if (data) {
 
-            res.status(200).send({success: true, msg: "product details :", data: data});
+            const imageName = data.images;
+            const imagePath = path.join(__dirname, '..', 'public/productImages', imageName);
+            res.status(200).send({success: true, msg: "product details :", data: {data, imagePath}});
             
         } else {
             res.status(200).send({ success: false, msg: "id not found!"});
