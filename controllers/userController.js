@@ -1,5 +1,6 @@
 const user= require("../models/productModel");
-
+const path= require("path");
+const fs = require("fs");
 
 // get all data
 const getdetail= async(req, res) => {
