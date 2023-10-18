@@ -10,6 +10,7 @@ const getdetail= async(req, res) => {
         const data= await user.find();
         const formattedData = data.map(item => ({
     
+              id: item._id,
               title: item.title,
               description: item.description,
               price: item.price ,
