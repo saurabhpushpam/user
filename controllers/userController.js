@@ -28,7 +28,6 @@ const getdetailbyid= async(req, res) => {
 
         if (data) {
 
-
             res.status(200).send({success: true, msg: "product details :", data: data});
             
         } else {
