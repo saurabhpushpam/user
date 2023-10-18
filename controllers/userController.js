@@ -6,7 +6,7 @@ const getdetail= async(req, res) => {
 
     try {
         
-        const id= req.body.id;
+      
        
         const data= await user.find();
 
