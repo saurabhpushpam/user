@@ -3,6 +3,7 @@ const app= express();
 const cors = require("cors");
 const http = require("http");
 app.use(express.json());
+app.use(cors());
 
 const mongoose = require('mongoose');
 

@@ -6,8 +6,6 @@ const getdetail= async(req, res) => {
 
     try {
         
-      
-       
         const data= await user.find();
 
             res.status(200).send({success: true, msg: "All details :", data: data});
@@ -23,7 +21,8 @@ const getdetail= async(req, res) => {
 const getdetailbyid= async(req, res) => {
     try {
         
-        const id= req.body.id;
+        //const id= req.body.id;
+        const id= req.params.id;
        
         const data= await user.findOne({ _id: id});
 
@@ -99,7 +98,8 @@ const updateproduct= async(req, res) =>{
  const deleteproduct= async(req, res) =>{
     try {
         
-        const id= req.body.id;
+       // const id= req.body.id;
+       const id= req.params.id;
        
 
         const data= await user.findOne({ _id: id});
