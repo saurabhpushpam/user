@@ -14,6 +14,7 @@ const getdetail = async (req, res) => {
             title: item.title,
             description: item.description,
             price: item.price,
+            image: item.images,
             imagePath: path.join(__dirname, '..', 'public/productImages', item.images) // Construct complete local image path
 
         }));
