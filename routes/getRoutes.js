@@ -44,6 +44,8 @@ get_route.get('/get-databyid/:id', user_controller.getdetailbyid);
 get_route.post('/post-data', upload.single('images'), user_controller.insertproduct);
 get_route.post('/update', upload.single('images'), user_controller.updateproduct);
 get_route.post('/delete/:id', user_controller.deleteproduct);
+get_route.get('/get-image/:image', user_controller.getimage);
+get_route.get('/get-imagebyid/:id', user_controller.getimagebyid);
 
 
 module.exports= get_route;
